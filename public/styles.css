@@ -1,0 +1,50 @@
+:root {
+  --ink: #17211b;
+  --muted: #6b756d;
+  --card: #fffef9;
+  --line: #dce2d7;
+  --accent: #d5ef66;
+  --accent-dark: #23320f;
+  --shadow: 0 24px 70px rgba(34, 49, 28, 0.13);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--ink);
+  background: radial-gradient(circle at 8% 12%, #e1efc9 0, transparent 26%), linear-gradient(135deg, #f8f8f1 0%, #e8eee1 100%);
+  font-family: 'DM Sans', sans-serif;
+}
+.shell { display: grid; min-height: 100vh; place-items: center; padding: 32px 20px; }
+.panel { width: min(100%, 560px); padding: clamp(32px, 7vw, 72px); background: rgba(255, 254, 249, .94); border: 1px solid rgba(255,255,255,.9); box-shadow: var(--shadow); }
+.hero-panel { position: relative; overflow: hidden; border-radius: 10px; }
+.hero-panel::after { content: ''; position: absolute; width: 180px; height: 180px; right: -72px; top: -72px; border-radius: 50%; background: var(--accent); opacity: .8; }
+.brand-mark { display: grid; width: 46px; height: 46px; margin-bottom: 64px; place-items: center; border: 6px solid #eef5d5; border-radius: 50%; color: var(--accent-dark); background: var(--accent); font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; }
+.eyebrow { display: block; margin-bottom: 18px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: 0; text-transform: uppercase; }
+h1 { position: relative; z-index: 1; margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(38px, 7vw, 62px); line-height: 1.02; letter-spacing: 0; }
+h1 em { color: #647d46; font-style: normal; }
+.intro { max-width: 390px; margin: 26px 0 34px; color: var(--muted); font-size: 16px; line-height: 1.65; }
+.button { display: inline-flex; min-height: 54px; align-items: center; justify-content: center; gap: 12px; padding: 0 20px; border: 0; border-radius: 5px; color: var(--accent-dark); background: var(--accent); font-weight: 700; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+.button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(79, 104, 29, .18); }
+.google-button { width: 100%; }
+.google-icon { display: block; flex: 0 0 21px; width: 21px; height: 21px; }
+.trust-note { display: flex; align-items: center; gap: 9px; margin-top: 24px; color: var(--muted); font-size: 12px; }
+.trust-icon { display: grid; width: 18px; height: 18px; place-items: center; border-radius: 50%; color: #35511b; background: #e6f4bd; font-size: 12px; font-weight: 700; }
+footer { margin-top: 18px; color: var(--muted); font-size: 12px; }
+footer span { padding: 0 7px; color: #9baa91; }
+.compact, .profile-panel { text-align: center; border-radius: 10px; }
+.compact h1 { font-size: 40px; }
+.compact p { margin: 18px auto 28px; color: var(--muted); line-height: 1.6; }
+.text-link { color: var(--ink); font-weight: 700; }
+.status-row { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 32px; color: #55712d; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.status-dot { width: 8px; height: 8px; border-radius: 50%; background: #78ad37; }
+.profile-identity { display: flex; align-items: center; gap: 20px; margin: 0 0 30px; text-align: left; }
+.avatar { flex: 0 0 92px; width: 92px; height: 92px; margin: 0; border-radius: 50%; object-fit: cover; }
+.avatar-fallback { display: grid; place-items: center; color: var(--accent-dark); background: var(--accent); font-family: 'Space Grotesk', sans-serif; font-size: 38px; font-weight: 700; }
+.profile-panel h1 { font-size: clamp(30px, 5vw, 46px); overflow-wrap: anywhere; }
+.profile-copy .eyebrow { margin-bottom: 10px; }
+.muted { margin: 10px 0 0; color: var(--muted); overflow-wrap: anywhere; }
+.profile-meta { display: flex; justify-content: space-between; padding: 16px 0; margin-bottom: 28px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.secondary { color: var(--ink); background: transparent; border: 1px solid var(--line); }
+@media (max-width: 520px) { .panel { padding: 32px 24px; } .brand-mark { margin-bottom: 46px; } .profile-identity { gap: 14px; } .avatar { flex-basis: 72px; width: 72px; height: 72px; } .profile-panel h1 { font-size: 28px; } }

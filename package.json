@@ -1,0 +1,21 @@
+{
+  "name": "oauth_demo",
+  "version": "1.0.0",
+  "description": "A minimal Google OAuth demo with Express and Passport.js",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-session": "^1.19.0",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0"
+  }
+}
