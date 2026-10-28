@@ -59,14 +59,14 @@ npm start
 - `/` - sign-in screen
 - `/auth/google` - starts the Google OAuth redirect
 - `/auth/google/callback` - receives the Google callback
-- `/profile` - protected profile screen
+- `/profile` - protected account dashboard with profile and activity snapshot
 - `/logout` - destroys the local session
 
 ## Sign-in flow
 
 1. Open the sign-in page. The application does not collect a password.
 2. Select **Continue with Google** and complete the consent step.
-3. The profile page displays the identity returned by Google and the active Passport session.
+3. The account dashboard displays the identity returned by Google, the active Passport session, and an activity snapshot.
 4. Refresh the page to confirm the session, then select **Sign out**.
 
 ## Development limitations
